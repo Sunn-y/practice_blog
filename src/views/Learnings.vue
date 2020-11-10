@@ -1,6 +1,4 @@
 <template>
-<v-main>
-	<v-container fluid>
 		<v-card>
 			<v-card-title>
 				<v-text-field v-model="search" append-icon="mdi-magnify" label="Search" single-line hide-details></v-text-field>
@@ -12,8 +10,6 @@
 		</div>
 </template> -->
   </v-card>
-</v-container>
-</v-main>
 </template>
 
 <script>

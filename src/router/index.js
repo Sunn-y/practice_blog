@@ -6,38 +6,55 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'AppHome',
-    component: () => import('../components/AppHome.vue')
+    name: 'Home',
+    component: () => import('../views/Home.vue')
   },
   {
     path: '/about',
     name: 'About',
-    component: () => import('../components/About.vue')
+    component: () => import('../views/About.vue')
   },
   {
     path: '/portfolio',
     name: 'Portfolio',
-    component: () => import('../components/Portfolio.vue')
+    component: () => import('../views/Portfolio.vue')
   },
   {
     path: '/thoughts',
     name: 'Thoughts',
-    component: () => import('../components/Thoughts.vue')
+    component: () => import('../views/Thoughts.vue')
   },
   {
     path: '/learnings',
     name: 'Learnings',
-    component: () => import('../components/Learnings.vue')
+    component: () => import('../views/Learnings.vue')
   },
   {
     path: '/reviews',
     name: 'Reviews',
-    component: () => import('../components/Reviews.vue')
+    component: () => import('../views/Reviews.vue'),
+    children: [
+      {
+        path: ':books',
+        name: 'Books',
+        component:  () => import('../views/Books.vue')
+      },
+      {
+        path: ':movies',
+        name: 'Movies',
+        component:  () => import('../views/Movies.vue')
+      },
+      {
+        path: ':lectures',
+        name: 'Lectures',
+        component:  () => import('../views/Lectures.vue')
+      },
+    ]
   },
   {
     path: '/travels',
     name: 'Travels',
-    component: () => import('../components/Travels.vue')
+    component: () => import('../views/Travels.vue')
   },
 ];
 

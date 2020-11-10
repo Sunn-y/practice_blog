@@ -1,6 +1,4 @@
 <template>
-<v-main>
-	<v-container fluid>
 		<v-card>
 			<v-tabs color="deep-purple accent-4" right>
 				<v-tab>Landscape</v-tab>
@@ -18,6 +16,4 @@
 				</v-tab-item>
 			</v-tabs>
 		</v-card>
-	</v-container>
-</v-main>
 </template>

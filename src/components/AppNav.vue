@@ -18,19 +18,17 @@
 		<v-divider></v-divider>
 
 		<v-list dense>
-			<v-list-item v-for="([icon, text, uri], i) in items" :key="i" link>
+			<v-list-item v-for="([icon, text, uri], i) in items" :key="i" link router :to='{name: uri}' exact>
 				<v-list-item-icon>
 					<v-icon>{{ icon }}</v-icon>
 				</v-list-item-icon>
 				<v-list-item-content>
-					<router-link :to='uri' style = "text-decoration: none; color:white; font-weight:bold;">
 					<v-list-item-title>{{ text }}</v-list-item-title>
-				</router-link>
 				</v-list-item-content>
 
 			</v-list-item>
 		</v-list>
-		<AppFooter v-if='mini === false'></AppFooter>
+		<AppFooter v-show='mini === false'></AppFooter>
 	</v-navigation-drawer>
 </v-card>
 </template>
@@ -46,13 +44,13 @@ export default {
 		mini: true,
 		userName: 'Sunny Day☀',
 		items: [
-			['mdi-home', 'Home', '/'],
-			['mdi-account', 'ABOUT', '/about'],
-			['mdi-badge-account-horizontal', 'PORTFOLIO', '/portfolio'],
-			['mdi-head-lightbulb-outline', 'THOUGHTS', '/thoughts'],
-			['mdi-book-open-variant', 'LEARNINGS', '/learnings'],
-			['mdi-file-document-edit', 'REVIEWS', '/reviews'],
-			['mdi-wallet-travel', 'TRAVELS', '/travels'],
+			['mdi-home', 'HOME', 'Home'],
+			['mdi-account', 'ABOUT', 'About'],
+			['mdi-badge-account-horizontal', 'PORTFOLIO', 'Portfolio'],
+			['mdi-head-lightbulb-outline', 'THOUGHTS', 'Thoughts'],
+			['mdi-book-open-variant', 'LEARNINGS', 'Learnings'],
+			['mdi-file-document-edit', 'REVIEWS', 'Reviews'],
+			['mdi-wallet-travel', 'TRAVELS', 'Travels'],
 		],
 	}),
 }

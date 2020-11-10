@@ -1,6 +1,4 @@
 <template>
-<v-main>
-	<v-container fluid>
 		<v-card class="mx-auto" max-width="344">
 			<v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="200px"></v-img>
 
@@ -35,8 +33,6 @@
 				</div>
 			</v-expand-transition>
 		</v-card>
-	</v-container>
-</v-main>
 </template>
 
 <script>

@@ -1,7 +1,6 @@
 <template>
-<v-main>
-	<v-container fluid>
 		<v-card color="basil">
+			<router-view></router-view>
 			<v-card-title class="text-center justify-center py-6">
 				<h1 class="font-weight-bold display-3 basil--text">
 					REVIEWS
@@ -23,12 +22,10 @@
 				</v-tab-item>
 			</v-tabs-items>
 		</v-card>
-	</v-container>
-</v-main>
 </template>
 
 <script>
-import ReviewsContents from './ReviewsContents.vue'
+import ReviewsContents from '../components/ReviewsContents.vue'
 export default {
 	components: {
 		ReviewsContents,

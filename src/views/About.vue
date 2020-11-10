@@ -1,6 +1,4 @@
 <template>
-<v-main>
-	<v-container fluid>
 		<v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
 			<v-timeline-item v-for="(item, i) in items" :key="i" :color="item.color" :icon="item.icon" fill-dot>
 				<v-card :color="item.color" dark>
@@ -16,8 +14,6 @@
 				</v-card>
 			</v-timeline-item>
 		</v-timeline>
-	</v-container>
-</v-main>
 </template>
 
 <script>

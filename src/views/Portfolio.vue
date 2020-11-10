@@ -1,8 +1,6 @@
 <template>
-	<v-main>
   <v-container
     class="fill-height"
-    fluid
     style="min-height: 434px"
   >
     <v-fade-transition mode="out-in">
@@ -63,5 +61,4 @@
       </v-row>
     </v-fade-transition>
   </v-container>
-</v-main>
 </template>
