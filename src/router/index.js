@@ -10,6 +10,10 @@ const routes = [
     component: () => import('../views/Home.vue')
   },
   {
+    path: '/*',
+    redirect:{name: 'Home'},
+  },
+  {
     path: '/about',
     name: 'About',
     component: () => import('../views/About.vue')
@@ -33,28 +37,32 @@ const routes = [
     path: '/reviews',
     name: 'Reviews',
     component: () => import('../views/Reviews.vue'),
-    children: [
-      {
-        path: ':books',
-        name: 'Books',
-        component:  () => import('../views/Books.vue')
-      },
-      {
-        path: ':movies',
-        name: 'Movies',
-        component:  () => import('../views/Movies.vue')
-      },
-      {
-        path: ':lectures',
-        name: 'Lectures',
-        component:  () => import('../views/Lectures.vue')
-      },
-    ]
   },
   {
     path: '/travels',
     name: 'Travels',
+    beforeEnter: (to, from, next) => {
+      console.log('to -> ',to,'from ->',from);
+      next();
+    },
     component: () => import('../views/Travels.vue')
+  },
+  {
+    path: '/test',
+    name: 'Test',
+    component: () => import('../views/Test.vue'),
+    children:[
+      {
+        path: ':id',
+        name: 'TestDetail',
+        component: () => import('../views/TestDetail.vue'),
+      },
+      {
+        path: ':id/edit',
+        name: 'TestEdit',
+        component: () => import('../views/TestEdit.vue'),
+      },
+    ]
   },
 ];
 

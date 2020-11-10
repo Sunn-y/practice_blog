@@ -51,6 +51,7 @@ export default {
 			['mdi-book-open-variant', 'LEARNINGS', 'Learnings'],
 			['mdi-file-document-edit', 'REVIEWS', 'Reviews'],
 			['mdi-wallet-travel', 'TRAVELS', 'Travels'],
+			['mdi-cards-spade', 'TEST', 'Test'],
 		],
 	}),
 }
