@@ -1,5 +1,5 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
 Vue.use(VueRouter)
 
@@ -31,7 +31,14 @@ const routes = [
   {
     path: '/learnings',
     name: 'Learnings',
-    component: () => import('../views/Learnings.vue')
+    component: () => import('../views/Learnings.vue'),
+    children: [
+     {
+        path: '/detail/:no',
+        name: 'Detail',
+        component: () => import('../views/Detail.vue'),
+     }
+ ],
   },
   {
     path: '/reviews',
@@ -70,6 +77,6 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
-})
+});
 
-export default router
+export default router;

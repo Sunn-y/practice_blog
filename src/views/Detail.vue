@@ -1,15 +1,10 @@
 <template>
 <v-card>
+	<router-view/>
 	<v-card-title>
 		<v-text-field v-model="search" append-icon="mdi-magnify" label="Search" single-line hide-details></v-text-field>
 	</v-card-title>
-
-	<router-link :to="{ name: 'Detail', params: { no: clicked } }">
-		<v-data-table light style="cursor:pointer;" :headers="headers" :items="articles" :search="search" @click:row="warn">
-
-		</v-data-table>
-	</router-link>
-
+	<v-data-table light :headers="headers" :items="articles" :search="search" @click:row="warn"></v-data-table>
 	<v-card-actions>
 		<v-spacer></v-spacer>
 		<v-btn outlined rounded text>글쓰기
@@ -62,12 +57,13 @@ export default {
 				},
 
 			],
-			clicked: 0,
+			clicked: '',
 		}
 	},
 	methods: {
-		warn(article) {
-			this.clicked = article.no;
+		warn(first) {
+			this.clicked = first;
+			alert(first.title);
 		}
 	}
 }
