@@ -40,8 +40,8 @@ export default {
 		AppFooter,
 	},
 	data: () => ({
-		drawer: true,
-		mini: true,
+		drawer: false,
+		mini: false,
 		userName: 'Sunny Day☀',
 		items: [
 			['mdi-home', 'HOME', 'Home'],
