@@ -2,7 +2,7 @@
 
 ## View
 
-[view.png](https://github.com/Sunn-y/practice_blog.git/src/assets/view.png)
+![view.png](https://github.com/Sunn-y/practice_blog.git/src/assets/view.png)
 
 ## Project setup
 
